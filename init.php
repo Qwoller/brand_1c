@@ -1,4 +1,8 @@
 <?
+/*
+В шаблонах аспро привязка к брендам идет через свойство "привязка к элментам", т.к в 1С такого свойства нет,
+необходимо было разработать механизм привязки выгружаемых брендов с типом "список" к оригинальному свойству
+*/
 AddEventHandler( "iblock", "OnAfterIBlockElementAdd", array("aspro_import", "FillTheBrands"));
 AddEventHandler( "iblock", "OnAfterIBlockElementUpdate", array("aspro_import", "FillTheBrands"));
 class aspro_import {
